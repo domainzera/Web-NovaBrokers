@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NovaBrokers - Contacto</title>
+  <link rel="stylesheet" href="main.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-content">
+      <div class="logo">
+        <h1>NovaBrokers</h1>
+        <p class="logo-subtitle">Broker de seguros digital</p>
+      </div>
+
+      <nav class="main-nav" aria-label="Navegación principal">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="cotizaciones.html">Cotizaciones</a></li>
+          <li><a href="sobrenosotros.html">Sobre Nosotros</a></li>
+          <li><a href="contacto.html" class="active">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="section-light">
+      <div class="container">
+        <header class="section-header">
+          <h2>Contacto</h2>
+          <p class="section-subtitle">
+            Dejanos tus datos y un asesor de NovaBrokers se va a contactar con vos.
+          </p>
+        </header>
+
+        <div class="contact-grid">
+          <!-- Tabla de Contacto -->
+          <section>
+            <h3>Escribinos</h3>
+            <form class="quote-form">
+              <div class="form-row">
+                <label for="nombre">Nombre completo</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Tu nombre">
+              </div>
+
+              <div class="form-row">
+                <label for="email-contacto">Correo electrónico</label>
+                <input type="email" id="email-contacto" name="email-contacto" placeholder="tu@correo.com">
+              </div>
+
+              <div class="form-row">
+                <label for="tipo-consulta">Tipo de consulta</label>
+                <select id="tipo-consulta" name="tipo-consulta">
+                  <option value="">Seleccioná una opción</option>
+                  <option value="contratacion">Quiero contratar un seguro</option>
+                  <option value="siniestro">Tuve un siniestro</option>
+                  <option value="consulta-general">Consulta general</option>
+                </select>
+              </div>
+
+              <div class="form-row">
+                <label for="mensaje-contacto">Mensaje</label>
+                <textarea id="mensaje-contacto" name="mensaje-contacto" rows="4"
+                  placeholder="Contanos en qué te podemos ayudar."></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary">
+                Enviar mensaje
+              </button>
+            </form>
+          </section>
+
+          <!-- Preguntas frecuentes -->
+          <section>
+            <h3>Preguntas frecuentes</h3>
+
+            <details class="faq-item">
+              <summary>¿Cuánto tarda en llegar mi póliza?</summary>
+              <p>
+                Una vez confirmada la contratación, recibís la póliza en tu correo
+                en un plazo estimado de 24 a 48 horas hábiles.
+              </p>
+            </details>
+
+            <details class="faq-item">
+              <summary>¿Cómo gestiono un siniestro?</summary>
+              <p>
+                Podés comunicarte por WhatsApp o mail y te acompañamos en todo el
+                proceso con la compañía aseguradora.
+              </p>
+            </details>
+
+            <details class="faq-item">
+              <summary>¿Puedo cambiar de plan más adelante?</summary>
+              <p>
+                Sí, revisamos tu caso y vemos si conviene ajustar la cobertura o
+                cambiar de producto.
+              </p>
+            </details>
+          </section>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <p>©️ 2025 NovaBrokers</p>
+      </div>
+      <div>
+        <p>📍 Buenos Aires, Argentina</p>
+        <p>📞 (+54) 911 3580-2736</p>
+        <p>📧 flococo@novabrokres.com.ar</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
