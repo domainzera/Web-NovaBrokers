@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+<<<<<<< HEAD
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>NovaBrokers | Cotizaciones de seguros</title>
@@ -27,10 +28,33 @@
         <a href="cotizaciones.html" class="nb-nav__link">Seguros</a>
         <a href="sobrenosotros.html" class="nb-nav__link">Nosotros</a>
         <a href="contacto.html" class="nb-nav__link nb-nav__link--cta">Contacto</a>
+=======
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NovaBrokers - Cotizaciones</title>
+  <link rel="stylesheet" href="main.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-content">
+      <div class="logo">
+        <h1>NovaBrokers</h1>
+        <p class="logo-subtitle">Broker de seguros digital</p>
+      </div>
+
+      <nav class="main-nav" aria-label="Navegación principal">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="cotizaciones.html" class="active">Cotizaciones</a></li>
+          <li><a href="sobrenosotros.html">Sobre Nosotros</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+>>>>>>> 76f092cb5b0480988d95268ee67295b6669aca21
       </nav>
     </div>
   </header>
 
+<<<<<<< HEAD
 
   <main>
     <section class="nb-page-hero">
@@ -203,5 +227,119 @@
 
   <script src="script.js"></script>
 
+=======
+  <main>
+    <section class="section-light">
+      <div class="container">
+        <header class="section-header">
+          <h2>Solicitá tu cotización</h2>
+          <p class="section-subtitle">
+            Completá tus datos y te mostramos un ejemplo de cómo podrían verse las alternativas.
+          </p>
+        </header>
+
+        <!-- Formulario para los tipos de seguro -->
+        <form class="quote-form">
+          <div class="form-row">
+            <label for="tipo-seguro">Tipo de seguro</label>
+            <select id="tipo-seguro" name="tipo-seguro">
+              <option value="">Seleccioná una opción</option>
+              <option value="auto">Auto</option>
+              <option value="hogar">Hogar</option>
+              <option value="vida">Vida</option>
+              <option value="viaje">Viaje</option>
+            </select>
+          </div>
+
+          <div class="form-row">
+            <label for="provincia">Provincia</label>
+            <input type="text" id="provincia" name="provincia" placeholder="Ej: Buenos Aires">
+          </div>
+
+          <div class="form-row">
+            <label for="email">Correo electrónico</label>
+            <input type="email" id="email" name="email" placeholder="tu@correo.com">
+          </div>
+
+          <div class="form-row">
+            <label for="detalle">Detalle</label>
+            <textarea id="detalle" name="detalle" rows="3"
+              placeholder="Contanos brevemente qué necesitás asegurar."></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary">
+            Enviar consulta (ejemplo)
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Ejemplos de los planes -->
+    <section>
+      <div class="container">
+        <header class="section-header">
+          <h2>Ejemplo de comparativa de planes</h2>
+        </header>
+
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>Plan</th>
+                <th>Tipo de seguro</th>
+                <th>Cobertura principal</th>
+                <th>Franquicia</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Básico</td>
+                <td id="auto">Auto</td>
+                <td>Terceros completo</td>
+                <td>No</td>
+              </tr>
+              <tr>
+                <td>Intermedio</td>
+                <td id="hogar">Hogar</td>
+                <td>Incendio + robo contenido</td>
+                <td>Sí</td>
+              </tr>
+              <tr>
+                <td>Premium</td>
+                <td id="vida">Vida</td>
+                <td>Capital asegurado ampliado</td>
+                <td>No</td>
+              </tr>
+              <tr>
+                <td>Viaje Plus</td>
+                <td id="viaje">Viaje</td>
+                <td>Asistencia médica internacional</td>
+                <td>No</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p class="small-text">
+          * Los datos de la tabla son de ejemplo académico y no corresponden a
+          productos reales.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <p>©️ 2025 NovaBrokers</p>
+      </div>
+      <div>
+        <p>📍 Buenos Aires, Argentina</p>
+        <p>📞 (+54) 911 3580-2736</p>
+        <p>📧 flococo@novabrokres.com.ar</p>
+      </div>
+    </div>
+  </footer>
+>>>>>>> 76f092cb5b0480988d95268ee67295b6669aca21
 </body>
 </html>
