@@ -1,0 +1,52 @@
+// Variables de diseño para NovaBrokers
+
+// Colores
+$primary: #ff7a00;
+$primary-soft: #ff9f3c;
+$primary-dark: #e06600;
+$bg: #ffffff;
+$bg-muted: #f6f6f7;
+$text: #1f1f23;
+$text-soft: #5c5c66;
+$border: #e1e1e6;
+
+// Border radius
+$radius-sm: 8px;
+$radius: 12px;
+$radius-lg: 18px;
+
+// Sombras
+$shadow-soft: 0 10px 25px rgba(0, 0, 0, 0.06);
+
+// Container
+$container-width: 1120px;
+
+// Breakpoints
+$breakpoint-xs: 480px;
+$breakpoint-sm: 640px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 1024px;
+
+// Espaciado
+$spacing-xs: 0.5rem;
+$spacing-sm: 0.75rem;
+$spacing-md: 1rem;
+$spacing-lg: 1.5rem;
+$spacing-xl: 2rem;
+$spacing-xxl: 3rem;
+
+// Tipografía
+$font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+$font-size-xs: 0.75rem;
+$font-size-sm: 0.85rem;
+$font-size-base: 0.9rem;
+$font-size-md: 1rem;
+$font-size-lg: 1.2rem;
+$font-size-xl: 1.5rem;
+$font-size-xxl: 1.8rem;
+$font-size-hero: 2.5rem;
+
+// Transiciones
+$transition-fast: 0.15s ease;
+$transition-base: 0.18s ease;
+$transition-slow: 0.2s ease;

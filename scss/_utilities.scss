@@ -1,0 +1,136 @@
+// Utilidades Flex y Grid
+
+@import "variables";
+@import "mixins";
+
+// Flex utilities
+%flex {
+  display: flex;
+}
+
+%flex-center {
+  @include flex-center;
+}
+
+%flex-column {
+  @include flex-column;
+}
+
+%flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+%flex-around {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+%flex-start {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+%flex-end {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+%flex-wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+// Grid utilities
+%grid {
+  display: grid;
+}
+
+%grid-center {
+  display: grid;
+  place-items: center;
+}
+
+// Utility classes
+.nb-flex {
+  @extend %flex;
+}
+
+.nb-flex-center {
+  @extend %flex-center;
+}
+
+.nb-flex-column {
+  @extend %flex-column;
+}
+
+.nb-flex-between {
+  @extend %flex-between;
+}
+
+.nb-flex-around {
+  @extend %flex-around;
+}
+
+.nb-flex-start {
+  @extend %flex-start;
+}
+
+.nb-flex-end {
+  @extend %flex-end;
+}
+
+.nb-flex-wrap {
+  @extend %flex-wrap;
+}
+
+.nb-grid {
+  @extend %grid;
+}
+
+.nb-grid-center {
+  @extend %grid-center;
+}
+
+// Gap utilities
+.nb-gap-xs {
+  gap: $spacing-xs;
+}
+
+.nb-gap-sm {
+  gap: $spacing-sm;
+}
+
+.nb-gap-md {
+  gap: $spacing-md;
+}
+
+.nb-gap-lg {
+  gap: $spacing-lg;
+}
+
+.nb-gap-xl {
+  gap: $spacing-xl;
+}
+
+// Spacing utilities
+.nb-mt-auto {
+  margin-top: auto;
+}
+
+.nb-mb-auto {
+  margin-bottom: auto;
+}
+
+.nb-w-full {
+  width: 100%;
+}
+
+.nb-h-full {
+  height: 100%;
+}
+

@@ -1,0 +1,136 @@
+// Mixins reutilizables
+
+// Breakpoints
+@mixin respond-to($breakpoint) {
+  @if $breakpoint == xs {
+    @media (min-width: $breakpoint-xs) {
+      @content;
+    }
+  } @else if $breakpoint == sm {
+    @media (min-width: $breakpoint-sm) {
+      @content;
+    }
+  } @else if $breakpoint == md {
+    @media (min-width: $breakpoint-md) {
+      @content;
+    }
+  } @else if $breakpoint == lg {
+    @media (min-width: $breakpoint-lg) {
+      @content;
+    }
+  }
+}
+
+// Flexbox centering
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// Flexbox column
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+// Button base styles
+@mixin button-base {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.85rem 1.25rem;
+  min-height: 44px;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  font-size: $font-size-base;
+  font-weight: 500;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform $transition-fast, box-shadow $transition-fast, 
+              background-color $transition-fast, color $transition-fast, 
+              border-color $transition-fast;
+  white-space: nowrap;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+
+// Card base styles
+@mixin card-base {
+  background-color: $bg;
+  border-radius: $radius;
+  border: 1px solid rgba(0, 0, 0, 0.03);
+  padding: $spacing-md $spacing-md $spacing-md + 0.1rem;
+  box-shadow: 0 10px 18px rgba(15, 23, 42, 0.04);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: visible;
+}
+
+// Input base styles
+@mixin input-base {
+  width: 100%;
+  border-radius: 999px;
+  border: 1px solid $border;
+  padding: 0.75rem $spacing-md;
+  min-height: 44px;
+  font: inherit;
+  font-size: 16px;
+  outline: none;
+  color: $text;
+  background-color: $bg;
+  transition: border-color $transition-fast, box-shadow $transition-fast, 
+              background-color $transition-fast;
+  box-sizing: border-box;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+// Focus state
+@mixin focus-state {
+  border-color: rgba($primary, 0.7);
+  box-shadow: 0 0 0 2px rgba($primary, 0.12);
+  background-color: #fffaf5;
+}
+
+// Container
+@mixin container {
+  width: 100%;
+  max-width: $container-width;
+  padding-inline: $spacing-md;
+  margin-inline: auto;
+}
+
+// Section padding
+@mixin section-padding {
+  padding-block: $spacing-xl;
+}
+
+// Text truncate
+@mixin text-truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+// Animation mixins
+@mixin fade-in($duration: 0.6s) {
+  animation: fadeIn $duration ease-out;
+}
+
+@mixin fade-in-up($duration: 0.6s) {
+  animation: fadeInUp $duration ease-out;
+}
+
+@mixin slide-in($direction: right, $duration: 0.6s) {
+  @if $direction == right {
+    animation: slideInRight $duration ease-out;
+  } @else {
+    animation: slideInLeft $duration ease-out;
+  }
+}
+
+@mixin scale-in($duration: 0.4s) {
+  animation: scaleIn $duration ease-out;
+}

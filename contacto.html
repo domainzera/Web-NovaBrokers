@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NovaBrokers | Contacto</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="main.css" />
+
+</head>
+<body class="nb-body">
+  <header class="nb-header">
+    <div class="nb-container nb-header__inner">
+      <a href="index.html" class="nb-logo">
+        <span class="nb-logo__mark">N</span>
+        <span class="nb-logo__text">Nova<span>Brokers</span></span>
+      </a>
+
+      <button class="nb-header__toggle" id="navToggle" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="nb-nav" id="navMenu">
+        <a href="index.html" class="nb-nav__link">Inicio</a>
+        <a href="cotizaciones.html" class="nb-nav__link">Seguros</a>
+        <a href="sobrenosotros.html" class="nb-nav__link">Nosotros</a>
+        <a href="contacto.html" class="nb-nav__link nb-nav__link--cta">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+
+  <main>
+    <section class="nb-page-hero">
+      <div class="nb-container nb-grid nb-grid--two">
+        <div>
+          <p class="nb-pill">Contacto</p>
+          <h1>Estamos para ayudarte.</h1>
+          <p class="nb-page-hero__text">
+            Escribinos por el canal que te quede más cómodo. Podemos ayudarte a cotizar, revisar tu póliza actual
+            o acompañarte en el proceso de un siniestro.
+          </p>
+          <div class="nb-contact-cards">
+            <div class="nb-card nb-card--contact">
+              <h3>WhatsApp</h3>
+              <p>Ideal para consultas rápidas y seguimiento de siniestros.</p>
+              <p class="nb-contact-cards__info">+54 9 11 5555-1234</p>
+            </div>
+            <div class="nb-card nb-card--contact">
+              <h3>Email</h3>
+              <p>Para enviar documentación y consultas más detalladas.</p>
+              <p class="nb-contact-cards__info">hola@novabrokers.com</p>
+            </div>
+          </div>
+        </div>
+        <div>
+          <form class="nb-form nb-form--stacked nb-form--elevated">
+            <h2>Enviános tu consulta</h2>
+            <div class="nb-form__group">
+              <label for="nombreContacto">Nombre y apellido</label>
+              <input type="text" id="nombreContacto" placeholder="Ej: Carla Rodríguez" />
+            </div>
+            <div class="nb-form__group nb-form__group--inline">
+              <div>
+                <label for="emailContacto">Email</label>
+                <input type="email" id="emailContacto" placeholder="nombre@mail.com" />
+              </div>
+              <div>
+                <label for="telefonoContacto">WhatsApp (opcional)</label>
+                <input type="tel" id="telefonoContacto" placeholder="+54 9 ..." />
+              </div>
+            </div>
+            <div class="nb-form__group">
+              <label for="motivo">Motivo de contacto</label>
+              <select id="motivo">
+                <option>Quiero cotizar un seguro</option>
+                <option>Quiero revisar mi póliza actual</option>
+                <option>Tuve un siniestro</option>
+                <option>Otra consulta</option>
+              </select>
+            </div>
+            <div class="nb-form__group">
+              <label for="mensaje">Mensaje</label>
+              <textarea id="mensaje" rows="4" placeholder="Contanos en qué te podemos ayudar."></textarea>
+            </div>
+            <button type="submit" class="nb-btn nb-btn--primary nb-btn--full">Enviar mensaje</button>
+            <p class="nb-form__hint">Respondemos de lunes a viernes de 9 a 18 hs.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="nb-section nb-section--muted">
+      <div class="nb-container nb-grid nb-grid--two">
+        <div>
+          <h2>¿Dónde operamos?</h2>
+          <p>Trabajamos de forma 100% digital, pero conocemos muy bien el mercado de seguros argentino.</p>
+          <ul class="nb-list-plain">
+            <li>CABA y Gran Buenos Aires</li>
+            <li>Provincia de Buenos Aires</li>
+            <li>Principales ciudades del interior del país</li>
+          </ul>
+        </div>
+        <div class="nb-map-container">
+          <iframe 
+            src="https://www.google.com/maps?q=Guido+1680,+Capital+Federal,+Buenos+Aires,+Argentina&output=embed"
+            width="100%" 
+            height="100%" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Ubicación NovaBrokers - Guido 1680, Capital Federal, Buenos Aires, Argentina">
+          </iframe>
+          <div class="nb-map-address">
+            <p><strong>Guido 1680</strong></p>
+            <p>Capital Federal, Buenos Aires, Argentina</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="nb-section nb-section--compact">
+      <div class="nb-container">
+        <h2>Preguntas frecuentes</h2>
+        <div class="nb-faq">
+          <details>
+            <summary>¿Puedo cambiar de aseguradora aunque mi póliza esté vigente?</summary>
+            <p>Sí. Te ayudamos a revisar tu póliza actual y evaluar si te conviene cambiar ahora o esperar al vencimiento.</p>
+          </details>
+          <details>
+            <summary>¿Trabajan solo con personas o también con empresas?</summary>
+            <p>Podemos ayudar tanto a personas como a pequeñas y medianas empresas. Escribinos y vemos tu caso.</p>
+          </details>
+          <details>
+            <summary>¿Cómo se gestiona un siniestro?</summary>
+            <p>Te acompañamos en todo el proceso: denuncia, seguimiento con la compañía y resolución final.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="nb-footer">
+    <div class="nb-container nb-footer__grid">
+      <div>
+        <div class="nb-logo nb-logo--footer">
+          <span class="nb-logo__mark">N</span>
+          <span class="nb-logo__text">Nova<span>Brokers</span></span>
+        </div>
+        <p class="nb-footer__text">
+          Bróker de seguros digital pensado para acompañarte en cada etapa de tu vida.
+        </p>
+      </div>
+      <div>
+        <h4 class="nb-footer__title">Secciones</h4>
+        <ul class="nb-footer__list">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="cotizaciones.html">Seguros</a></li>
+          <li><a href="sobrenosotros.html">Nosotros</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="nb-footer__title">Contacto</h4>
+        <ul class="nb-footer__list">
+          <li>Tel: +54 11 5555-1234</li>
+          <li>Email: hola@novabrokers.com</li>
+          <li>Lun a vie de 9 a 18 hs</li>
+        </ul>
+      </div>
+    </div>
+    <div class="nb-footer__bottom">
+      <div class="nb-container nb-footer__bottom-inner">
+        <p>© 2025 NovaBrokers. Todos los derechos reservados.</p>
+        <p class="nb-footer__legal">NovaBrokers actúa como productor asesor de seguros. Las pólizas son emitidas por compañías aseguradoras debidamente registradas.</p>
+      </div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/5491155551234" class="nb-whatsapp" target="_blank" rel="noopener">
+    <span>💬</span>
+  </a>
+
+  <script src="script.js"></script>
+
+</body>
+</html>

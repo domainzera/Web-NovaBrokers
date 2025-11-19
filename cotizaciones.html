@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NovaBrokers | Cotizaciones de seguros</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="main.css" />
+
+</head>
+<body class="nb-body">
+  <header class="nb-header">
+    <div class="nb-container nb-header__inner">
+      <a href="index.html" class="nb-logo">
+        <span class="nb-logo__mark">N</span>
+        <span class="nb-logo__text">Nova<span>Brokers</span></span>
+      </a>
+
+      <button class="nb-header__toggle" id="navToggle" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="nb-nav" id="navMenu">
+        <a href="index.html" class="nb-nav__link">Inicio</a>
+        <a href="cotizaciones.html" class="nb-nav__link">Seguros</a>
+        <a href="sobrenosotros.html" class="nb-nav__link">Nosotros</a>
+        <a href="contacto.html" class="nb-nav__link nb-nav__link--cta">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+
+  <main>
+    <section class="nb-page-hero">
+      <div class="nb-container">
+        <p class="nb-pill">Cotizaciones</p>
+        <h1>Elegí el tipo de seguro que necesitás y empezá tu cotización.</h1>
+        <p class="nb-page-hero__text">
+          Completá un breve formulario para que podamos armarte una propuesta a medida. Sin costo y sin compromiso.
+        </p>
+      </div>
+    </section>
+
+    <section class="nb-section">
+      <div class="nb-container nb-grid nb-grid--products">
+        <article class="nb-card nb-card--product">
+          <div class="nb-card__icon">🚗</div>
+          <h3>Seguro de Auto</h3>
+          <p>Ideal si querés actualizar tu cobertura o comparar con otras aseguradoras.</p>
+          <ul class="nb-card__list">
+            <li>Terceros completo</li>
+            <li>Todo riesgo con franquicia</li>
+            <li>Cobertura para 0km y usados</li>
+          </ul>
+          <a href="#form-auto" class="nb-btn nb-btn--ghost nb-btn--full">Cotizar auto</a>
+        </article>
+
+        <article class="nb-card nb-card--product">
+          <div class="nb-card__icon">🏡</div>
+          <h3>Seguro de Hogar</h3>
+          <p>Protegé tu vivienda y tus cosas ante imprevistos.</p>
+          <ul class="nb-card__list">
+            <li>Incendio, robo y roturas</li>
+            <li>Cobertura para contenido y edificio</li>
+            <li>Opciones para propietarios e inquilinos</li>
+          </ul>
+          <a href="#form-hogar" class="nb-btn nb-btn--ghost nb-btn--full">Cotizar hogar</a>
+        </article>
+
+        <article class="nb-card nb-card--product">
+          <div class="nb-card__icon">❤️</div>
+          <h3>Seguro de Vida</h3>
+          <p>Planes diseñados para cuidar a tu familia pase lo que pase.</p>
+          <ul class="nb-card__list">
+            <li>Sumas aseguradas flexibles</li>
+            <li>Planes individuales y familiares</li>
+            <li>Alternativas con ahorro</li>
+          </ul>
+          <a href="#form-vida" class="nb-btn nb-btn--ghost nb-btn--full">Cotizar vida</a>
+        </article>
+
+        <article class="nb-card nb-card--product">
+          <div class="nb-card__icon">🏍️</div>
+          <h3>Seguro de Moto</h3>
+          <p>Para moverte tranquilo todos los días, en ciudad o ruta.</p>
+          <ul class="nb-card__list">
+            <li>Responsabilidad civil</li>
+            <li>Terceros completo</li>
+            <li>Cobertura para motos nuevas y usadas</li>
+          </ul>
+          <a href="#form-moto" class="nb-btn nb-btn--ghost nb-btn--full">Cotizar moto</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="nb-section nb-section--muted">
+      <div class="nb-container nb-grid nb-grid--two">
+        <div>
+          <h2>¿Cómo armamos tu cotización?</h2>
+          <p>Trabajamos con diferentes aseguradoras para conseguirte la mejor combinación entre precio, cobertura y servicio.</p>
+          <ul class="nb-list-check">
+            <li>Analizamos tu caso particular (uso, zona, historial, etc.).</li>
+            <li>Te mostramos 2 o 3 alternativas recomendadas.</li>
+            <li>Te acompañamos en la decisión y en el alta de la póliza.</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Datos básicos para empezar</h3>
+          <p>Cuantos más datos nos des, más ajustada será la cotización, pero siempre podés empezar con lo mínimo:</p>
+          <ul class="nb-list-plain">
+            <li>Tipo de seguro y provincia.</li>
+            <li>Datos de tu vehículo o vivienda (si aplica).</li>
+            <li>Forma de contacto (WhatsApp, mail o llamada).</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="nb-section nb-section--compact" id="form-auto">
+      <div class="nb-container nb-grid nb-grid--two">
+        <div>
+          <h2>Dejanos tus datos y te armamos la cotización</h2>
+          <p>Un asesor de NovaBrokers te va a contactar dentro del horario laboral para avanzar con tu cotización.</p>
+        </div>
+        <form class="nb-form nb-form--stacked">
+          <div class="nb-form__group">
+            <label for="tipo">Tipo de seguro</label>
+            <select id="tipo">
+              <option>Auto</option>
+              <option>Hogar</option>
+              <option>Vida</option>
+              <option>Moto</option>
+              <option>Otro / Empresa</option>
+            </select>
+          </div>
+          <div class="nb-form__group">
+            <label for="fullname">Nombre y apellido</label>
+            <input type="text" id="fullname" placeholder="Ej: Juan Pérez" />
+          </div>
+          <div class="nb-form__group nb-form__group--inline">
+            <div>
+              <label for="telefonoCot">WhatsApp</label>
+              <input type="tel" id="telefonoCot" placeholder="+54 9 ..." />
+            </div>
+            <div>
+              <label for="provinciaCot">Provincia</label>
+              <input type="text" id="provinciaCot" placeholder="Ej: Buenos Aires" />
+            </div>
+          </div>
+          <div class="nb-form__group">
+            <label for="detalle">Contanos brevemente qué estás buscando</label>
+            <textarea id="detalle" rows="3" placeholder="Ej: Quiero revisar mi seguro actual de auto y ver si hay mejores opciones."></textarea>
+          </div>
+          <button type="submit" class="nb-btn nb-btn--primary nb-btn--full">Enviar consulta</button>
+          <p class="nb-form__hint">Un asesor se comunicará dentro de las próximas 24 hs hábiles.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="nb-footer">
+    <div class="nb-container nb-footer__grid">
+      <div>
+        <div class="nb-logo nb-logo--footer">
+          <span class="nb-logo__mark">N</span>
+          <span class="nb-logo__text">Nova<span>Brokers</span></span>
+        </div>
+        <p class="nb-footer__text">
+          Bróker de seguros digital pensado para acompañarte en cada etapa de tu vida.
+        </p>
+      </div>
+      <div>
+        <h4 class="nb-footer__title">Secciones</h4>
+        <ul class="nb-footer__list">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="cotizaciones.html">Seguros</a></li>
+          <li><a href="sobrenosotros.html">Nosotros</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="nb-footer__title">Contacto</h4>
+        <ul class="nb-footer__list">
+          <li>Tel: +54 11 5555-1234</li>
+          <li>Email: hola@novabrokers.com</li>
+          <li>Lun a vie de 9 a 18 hs</li>
+        </ul>
+      </div>
+    </div>
+    <div class="nb-footer__bottom">
+      <div class="nb-container nb-footer__bottom-inner">
+        <p>© 2025 NovaBrokers. Todos los derechos reservados.</p>
+        <p class="nb-footer__legal">NovaBrokers actúa como productor asesor de seguros. Las pólizas son emitidas por compañías aseguradoras debidamente registradas.</p>
+      </div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/5491155551234" class="nb-whatsapp" target="_blank" rel="noopener">
+    <span>💬</span>
+  </a>
+
+  <script src="script.js"></script>
+
+</body>
+</html>

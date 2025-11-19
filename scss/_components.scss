@@ -1,0 +1,634 @@
+// Componentes (cards, botones, formularios, etc.)
+
+@import "variables";
+@import "mixins";
+@import "animations";
+
+// Variables CSS 
+:root {
+  --nb-primary: #{$primary};
+  --nb-primary-soft: #{$primary-soft};
+  --nb-primary-dark: #{$primary-dark};
+  --nb-bg: #{$bg};
+  --nb-bg-muted: #{$bg-muted};
+  --nb-text: #{$text};
+  --nb-text-soft: #{$text-soft};
+  --nb-border: #{$border};
+  --nb-radius-sm: #{$radius-sm};
+  --nb-radius: #{$radius};
+  --nb-radius-lg: #{$radius-lg};
+  --nb-shadow-soft: #{$shadow-soft};
+  --nb-container-width: #{$container-width};
+}
+
+// Hero
+.nb-hero {
+  padding-block: $spacing-xl 2.5rem;
+  background: radial-gradient(circle at top left, #fff0e0 0, #ffffff 55%);
+  @include fade-in(0.8s);
+
+  @include respond-to(sm) {
+    padding-block: 2.5rem 2.75rem;
+  }
+
+  @include respond-to(md) {
+    padding-block: 2.75rem $spacing-xxl;
+  }
+
+  @include respond-to(lg) {
+    padding-block: 3.2rem;
+  }
+}
+
+.nb-hero__grid {
+  display: grid;
+  gap: $spacing-lg;
+
+  @include respond-to(sm) {
+    grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+    align-items: center;
+    gap: $spacing-xl;
+  }
+}
+
+.nb-hero__content {
+  @include fade-in-up(0.8s);
+  animation-delay: 0.2s;
+  animation-fill-mode: both;
+
+  h1 {
+    font-size: 1.75rem;
+    line-height: 1.15;
+    margin-top: 0.8rem;
+    margin-bottom: 0.9rem;
+
+    @include respond-to(xs) {
+      font-size: 2rem;
+    }
+
+    @include respond-to(sm) {
+      font-size: 2.1rem;
+    }
+
+    @include respond-to(md) {
+      font-size: 2.3rem;
+    }
+
+    @include respond-to(lg) {
+      font-size: $font-size-hero;
+    }
+  }
+}
+
+.nb-hero__text {
+  margin: 0;
+  color: $text-soft;
+  font-size: 0.98rem;
+  line-height: 1.6;
+}
+
+.nb-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.25rem 0.7rem;
+  border-radius: 999px;
+  background-color: rgba($primary, 0.08);
+  color: $primary-dark;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.nb-hero__actions {
+  @include flex-column;
+  gap: 0.75rem;
+  margin-top: 1.4rem;
+  margin-bottom: 1.3rem;
+
+  .nb-btn {
+    width: 100%;
+  }
+
+  @include respond-to(xs) {
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    .nb-btn {
+      width: auto;
+      flex: 1;
+      min-width: 140px;
+    }
+  }
+
+  @include respond-to(sm) {
+    flex-wrap: nowrap;
+
+    .nb-btn {
+      flex: 0 1 auto;
+    }
+  }
+}
+
+.nb-hero__meta {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.8rem;
+  padding-top: 0.5rem;
+  border-top: 1px dashed rgba(0, 0, 0, 0.06);
+
+  @include respond-to(xs) {
+    gap: $spacing-md;
+  }
+
+  @include respond-to(sm) {
+    gap: 1.3rem;
+  }
+
+  div {
+    @include flex-column;
+  }
+
+  strong {
+    font-size: 0.95rem;
+
+    @include respond-to(sm) {
+      font-size: 1.05rem;
+    }
+  }
+
+  span {
+    font-size: 0.75rem;
+    color: $text-soft;
+
+    @include respond-to(sm) {
+      font-size: 0.78rem;
+    }
+  }
+}
+
+.nb-hero__card {
+  background-color: $bg;
+  border-radius: $radius-lg;
+  box-shadow: $shadow-soft;
+  padding: 1.2rem 1.25rem 1.3rem;
+  @include scale-in(0.6s);
+  animation-delay: 0.4s;
+  animation-fill-mode: both;
+
+  @include respond-to(sm) {
+    padding: 1.3rem $spacing-lg 1.35rem;
+  }
+
+  h2 {
+    margin: 0 0 0.3rem;
+    font-size: $font-size-lg;
+  }
+
+  p {
+    margin: 0 0 1.2rem;
+    font-size: 0.9rem;
+    color: $text-soft;
+  }
+}
+
+// Extension de botones
+%btn-base {
+  @include button-base;
+}
+
+// Botones
+.nb-btn {
+  @extend %btn-base;
+  @extend %transition-base;
+}
+
+.nb-btn--primary {
+  @extend %btn-base;
+  background: linear-gradient(135deg, $primary, $primary-soft);
+  color: #fff;
+  box-shadow: 0 12px 25px rgba($primary, 0.3);
+  @extend %hover-lift;
+
+  &:hover {
+    box-shadow: 0 16px 28px rgba($primary, 0.35);
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+}
+
+.nb-btn--secondary {
+  background-color: $bg;
+  border-color: rgba(0, 0, 0, 0.06);
+  color: $text;
+
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.02);
+  }
+}
+
+.nb-btn--ghost {
+  background-color: transparent;
+  border-color: rgba(0, 0, 0, 0.08);
+  color: $text-soft;
+
+  &:hover {
+    border-color: rgba(0, 0, 0, 0.22);
+    color: $text;
+  }
+}
+
+.nb-btn--full {
+  width: 100%;
+}
+
+// Extension de formularios
+%form-base {
+  @include flex-column;
+  gap: 0.85rem;
+}
+
+// Formularios
+.nb-form {
+  @extend %form-base;
+}
+
+.nb-form--compact .nb-form__group--inline {
+  display: grid;
+  gap: 0.7rem;
+
+  @include respond-to(sm) {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.nb-form--compact .nb-form__group--inline > div {
+  min-width: 0;
+}
+
+.nb-form__group {
+  @include flex-column;
+  gap: 0.25rem;
+  font-size: 0.88rem;
+
+  label {
+    font-weight: 500;
+    color: $text;
+  }
+
+  input,
+  select,
+  textarea {
+    @include input-base;
+  }
+
+  textarea {
+    border-radius: $radius;
+    resize: vertical;
+    min-height: 96px;
+  }
+
+  input::placeholder,
+  textarea::placeholder {
+    color: #a1a1aa;
+  }
+
+  input:focus,
+  select:focus,
+  textarea:focus {
+    @include focus-state;
+  }
+}
+
+.nb-form__hint {
+  margin: 0;
+  font-size: 0.78rem;
+  color: $text-soft;
+}
+
+.nb-form--stacked {
+  max-width: 480px;
+}
+
+.nb-form--elevated {
+  padding: 1.2rem 1.2rem 1.4rem;
+  border-radius: $radius-lg;
+  border: 1px solid rgba(0, 0, 0, 0.03);
+  box-shadow: $shadow-soft;
+  background-color: $bg;
+}
+
+.nb-form--stacked h2 {
+  margin-top: 0;
+  margin-bottom: 0.8rem;
+}
+
+// Cards Extend
+%card-base-extend {
+  @include card-base;
+}
+
+// Cards
+.nb-card {
+  @extend %card-base-extend;
+
+  @include respond-to(sm) {
+    padding: 1.05rem 1.1rem 1.2rem;
+  }
+}
+
+.nb-card--product {
+  h3 {
+    margin-top: 0.4rem;
+    margin-bottom: 0.4rem;
+    flex-shrink: 0;
+  }
+
+  p {
+    margin-top: 0;
+    margin-bottom: 0.8rem;
+    color: $text-soft;
+    font-size: 0.9rem;
+    flex-shrink: 0;
+  }
+
+  .nb-link {
+    margin-top: auto;
+    padding-top: 0.5rem;
+    padding-bottom: 0.2rem;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: rgba($primary, 0.2);
+    pointer-events: auto;
+    position: relative;
+    z-index: 10;
+    width: fit-content;
+    min-width: fit-content;
+  }
+}
+
+.nb-card__icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  @include flex-center;
+  background-color: rgba($primary, 0.09);
+  font-size: $font-size-lg;
+  flex-shrink: 0;
+}
+
+.nb-card__list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0 0 $spacing-md;
+  font-size: $font-size-sm;
+  color: $text-soft;
+  flex-shrink: 0;
+
+  li {
+    position: relative;
+    padding-left: 1.1rem;
+    margin-bottom: 0.35rem;
+
+    &::before {
+      content: "•";
+      position: absolute;
+      left: 0.2rem;
+      top: 0.05rem;
+      color: $primary;
+    }
+  }
+}
+
+// Testimonials
+.nb-card--testimonial {
+  position: relative;
+}
+
+.nb-card__quote {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: $text-soft;
+  margin-top: 0;
+  margin-bottom: 0.9rem;
+}
+
+.nb-card__person {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+
+.nb-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 999px;
+  @include flex-center;
+  background-color: rgba(15, 23, 42, 0.06);
+  font-size: 0.85rem;
+  font-weight: 600;
+
+  &--lg {
+    width: 44px;
+    height: 44px;
+  }
+}
+
+.nb-card__person span {
+  font-size: 0.8rem;
+  color: $text-soft;
+}
+
+// Stats
+.nb-stats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: $spacing-md;
+  margin-top: 1.5rem;
+
+  @include respond-to(sm) {
+    display: flex;
+    gap: 1.3rem;
+  }
+}
+
+// Steps
+.nb-list-steps {
+  @include flex-column;
+  gap: $spacing-md;
+}
+
+.nb-step {
+  display: flex;
+  gap: 0.8rem;
+}
+
+.nb-step__badge {
+  width: 26px;
+  height: 26px;
+  border-radius: 999px;
+  background-color: rgba($primary, 0.1);
+  color: $primary-dark;
+  @include flex-center;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+// Allies
+.nb-allies {
+  @include flex-column;
+  gap: 0.7rem;
+  align-items: flex-start;
+
+  p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: $text-soft;
+  }
+}
+
+.nb-allies__row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.nb-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.3rem 0.7rem;
+  border-radius: 999px;
+  font-size: 0.78rem;
+
+  &--ally {
+    background-color: $bg;
+    border: 1px dashed rgba(0, 0, 0, 0.08);
+    color: $text-soft;
+  }
+}
+
+// CTA section
+.nb-section__cta-inner {
+  @include flex-column;
+  gap: 1.2rem;
+
+  @include respond-to(sm) {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  h2 {
+    margin: 0 0 0.4rem;
+  }
+
+  p {
+    margin: 0;
+    font-size: 0.95rem;
+  }
+}
+
+// Link base extend
+%link-base {
+  display: inline-block;
+  font-size: $font-size-sm;
+  text-decoration: none;
+  font-weight: 500;
+  cursor: pointer;
+  position: relative;
+  z-index: 10;
+  @extend %transition-base;
+  pointer-events: auto;
+}
+
+// Links
+.nb-link {
+  @extend %link-base;
+  color: $primary-dark;
+
+  &:hover {
+    text-decoration: underline;
+    color: $primary;
+    transform: translateX(4px);
+  }
+}
+
+// Card base extend
+%card-interactive {
+  @extend %transition-base;
+  position: relative;
+  pointer-events: auto;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 16px 32px rgba(15, 23, 42, 0.07);
+  }
+}
+
+// Card animations - usando @for para delays dinámicos
+.nb-card--product,
+.nb-card--testimonial,
+.nb-card--contact,
+.nb-card--stat {
+  @extend %card-interactive;
+  @include fade-in-up(0.5s);
+  
+  // Stagger animation for grid items usando @for
+  @for $i from 1 through 10 {
+    &:nth-child(#{$i}) {
+      animation-delay: $i * 0.1s;
+    }
+  }
+}
+
+.nb-card--product:hover .nb-link {
+  z-index: 20;
+}
+
+// WhatsApp button
+.nb-whatsapp {
+  position: fixed;
+  right: $spacing-md;
+  bottom: $spacing-md;
+  width: 56px;
+  height: 56px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #25d366, #17b051);
+  @include flex-center;
+  color: #fff;
+  text-decoration: none;
+  box-shadow: 0 12px 26px rgba(0, 0, 0, 0.35);
+  z-index: 50;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+  @include scale-in(0.5s);
+  @extend %hover-scale;
+  
+  &:hover {
+    animation: pulse 1s ease-in-out infinite;
+  }
+
+  @include respond-to(sm) {
+    right: 1.1rem;
+    bottom: 1.1rem;
+    width: 50px;
+    height: 50px;
+  }
+
+  @include respond-to(md) {
+    width: 48px;
+    height: 48px;
+  }
+
+  span {
+    font-size: 1.75rem;
+
+    @include respond-to(sm) {
+      font-size: 1.6rem;
+    }
+
+    @include respond-to(md) {
+      font-size: 1.5rem;
+    }
+  }
+}

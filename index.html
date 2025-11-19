@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NovaBrokers | Seguros digitales</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="main.css" />
+
+</head>
+<body class="nb-body">
+  <header class="nb-header">
+    <div class="nb-container nb-header__inner">
+      <a href="index.html" class="nb-logo">
+        <span class="nb-logo__mark">N</span>
+        <span class="nb-logo__text">Nova<span>Brokers</span></span>
+      </a>
+
+      <button class="nb-header__toggle" id="navToggle" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="nb-nav" id="navMenu">
+        <a href="index.html" class="nb-nav__link">Inicio</a>
+        <a href="cotizaciones.html" class="nb-nav__link">Seguros</a>
+        <a href="sobrenosotros.html" class="nb-nav__link">Nosotros</a>
+        <a href="contacto.html" class="nb-nav__link nb-nav__link--cta">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+
+  <main>
+    <!-- HERO -->
+    <section class="nb-hero">
+      <div class="nb-container nb-hero__grid">
+        <div class="nb-hero__content">
+          <p class="nb-pill">Bróker de seguros digital</p>
+          <h1>Protegé lo que más importa con asesoramiento simple y humano.</h1>
+          <p class="nb-hero__text">
+            Cotizá tu seguro de auto, hogar, vida o moto en minutos. Sin letra chica, sin vueltas,
+            100% online y con acompañamiento personalizado.
+          </p>
+          <div class="nb-hero__actions nb-flex nb-flex-column nb-gap-sm">
+            <a href="cotizaciones.html" class="nb-btn nb-btn--primary">Cotizar mi seguro</a>
+            <a href="sobrenosotros.html" class="nb-btn nb-btn--ghost">Conocer más</a>
+          </div>
+          <div class="nb-hero__meta nb-grid">
+            <div class="nb-flex nb-flex-column">
+              <strong>+1.300</strong>
+              <span>personas aseguradas</span>
+            </div>
+            <div class="nb-flex nb-flex-column">
+              <strong>24/7</strong>
+              <span>soporte y asistencia</span>
+            </div>
+            <div class="nb-flex nb-flex-column">
+              <strong>12</strong>
+              <span>aseguradoras aliadas</span>
+            </div>
+          </div>
+        </div>
+        <div class="nb-hero__card">
+          <h2>Obtené una cotización rápida</h2>
+          <p>Completá estos datos y te contactamos con la mejor opción para vos.</p>
+          <form class="nb-form nb-form--compact">
+            <div class="nb-form__group">
+              <label for="tipoSeguro">Tipo de seguro</label>
+              <select id="tipoSeguro">
+                <option>Auto</option>
+                <option>Hogar</option>
+                <option>Vida</option>
+                <option>Moto</option>
+                <option>Combinado</option>
+              </select>
+            </div>
+            <div class="nb-form__group">
+              <label for="provincia">Provincia</label>
+              <input type="text" id="provincia" placeholder="Ej: Buenos Aires" />
+            </div>
+            <div class="nb-form__group nb-form__group--inline">
+              <div>
+                <label for="nombre">Nombre</label>
+                <input type="text" id="nombre" placeholder="Tu nombre" />
+              </div>
+              <div>
+                <label for="telefono">WhatsApp</label>
+                <input type="tel" id="telefono" placeholder="+54 9  ..." />
+              </div>
+            </div>
+            <button type="submit" class="nb-btn nb-btn--primary nb-btn--full">Quiero que me llamen</button>
+            <p class="nb-form__hint">No compartimos tus datos con terceros sin tu autorización.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRODUCTOS -->
+    <section class="nb-section">
+      <div class="nb-container">
+        <header class="nb-section__header">
+          <h2>Soluciones de seguros pensadas para vos</h2>
+          <p>Trabajamos con distintos tipos de seguros para acompañarte en cada etapa.</p>
+        </header>
+
+        <div class="nb-grid nb-grid--products nb-gap-lg">
+          <article class="nb-card nb-card--product animate-fade-in-up animate-delay-1">
+            <div class="nb-card__icon">🚗</div>
+            <h3>Seguro de Auto</h3>
+            <p>Responsabilidad civil, terceros completo y todo riesgo con franquicia. Ajustamos el plan a tu vehículo y uso diario.</p>
+            <ul class="nb-card__list">
+              <li>Cobertura ante robo, incendio y accidentes</li>
+              <li>Servicio de remolque y auxilio mecánico</li>
+              <li>Gestión 100% online de siniestros</li>
+            </ul>
+            <a href="cotizaciones.html" class="nb-link">Cotizar auto →</a>
+          </article>
+
+          <article class="nb-card nb-card--product animate-fade-in-up animate-delay-2">
+            <div class="nb-card__icon">🏡</div>
+            <h3>Seguro de Hogar</h3>
+            <p>Protegé tu casa y todo lo que hay adentro. Ideal para viviendas propias o alquiladas.</p>
+            <ul class="nb-card__list">
+              <li>Daños por incendio, robo y eventos climáticos</li>
+              <li>Cobertura para electrodomésticos y tecnología</li>
+              <li>Ampliaciones de responsabilidad civil</li>
+            </ul>
+            <a href="cotizaciones.html" class="nb-link">Cotizar hogar →</a>
+          </article>
+
+          <article class="nb-card nb-card--product animate-fade-in-up animate-delay-3">
+            <div class="nb-card__icon">❤️</div>
+            <h3>Seguro de Vida</h3>
+            <p>Diseñado para cuidar a quienes más querés, con planes flexibles y sumas aseguradas ajustadas a tu realidad.</p>
+            <ul class="nb-card__list">
+              <li>Planes individuales y familiares</li>
+              <li>Opciones con ahorro y protección</li>
+              <li>Asesoramiento cercano y simple</li>
+            </ul>
+            <a href="cotizaciones.html" class="nb-link">Cotizar vida →</a>
+          </article>
+
+          <article class="nb-card nb-card--product animate-fade-in-up animate-delay-4">
+            <div class="nb-card__icon">🏍️</div>
+            <h3>Seguro de Moto</h3>
+            <p>Coberturas adaptadas a tu moto y forma de uso, para moverte tranquilo todos los días.</p>
+            <ul class="nb-card__list">
+              <li>Responsabilidad civil y terceros completo</li>
+              <li>Planes para uso urbano o profesional</li>
+              <li>Gestión digital de documentación</li>
+            </ul>
+            <a href="cotizaciones.html" class="nb-link">Cotizar moto →</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- POR QUÉ ELEGIRNOS -->
+    <section class="nb-section nb-section--muted">
+      <div class="nb-container nb-grid nb-grid--two">
+        <div>
+          <h2>Un bróker digital, pero con trato humano.</h2>
+          <p>
+            Combinamos tecnología, procesos simples y un equipo de personas reales listas para ayudarte.
+            Sin bots invasivos, sin letra chica, sin tener que perder horas en una sucursal física.
+          </p>
+        <div class="nb-stats nb-flex nb-flex-between nb-gap-lg">
+          <div class="nb-flex nb-flex-column">
+            <strong>4.8/5</strong>
+            <span>Nivel de satisfacción promedio</span>
+          </div>
+          <div class="nb-flex nb-flex-column">
+            <strong>&lt; 24 hs</strong>
+            <span>Tiempo de respuesta en siniestros</span>
+          </div>
+        </div>
+        </div>
+        <div class="nb-list-steps nb-flex nb-flex-column nb-gap-md">
+          <div class="nb-step nb-flex nb-gap-sm">
+            <span class="nb-step__badge">1</span>
+            <div>
+              <h3>Nos contás qué necesitás</h3>
+              <p>Un asesor te ayuda a entender qué coberturas realmente suman valor para tu caso.</p>
+            </div>
+          </div>
+          <div class="nb-step">
+            <span class="nb-step__badge">2</span>
+            <div>
+              <h3>Comparás opciones en un solo lugar</h3>
+              <p>Te mostramos alternativas de diferentes aseguradoras con lenguaje claro y directo.</p>
+            </div>
+          </div>
+          <div class="nb-step">
+            <span class="nb-step__badge">3</span>
+            <div>
+              <h3>Contratás 100% online</h3>
+              <p>Firmás digitalmente y recibís toda la documentación en tu mail y WhatsApp.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIOS -->
+    <section class="nb-section">
+      <div class="nb-container">
+        <header class="nb-section__header">
+          <h2>Lo que dicen nuestros clientes</h2>
+          <p>Historias reales de personas que eligieron asegurar con NovaBrokers.</p>
+        </header>
+        <div class="nb-grid nb-grid--testimonials">
+          <article class="nb-card nb-card--testimonial">
+            <p class="nb-card__quote">
+              “Tenía miedo de cambiar mi seguro de auto, pero me explicaron todo con mucha paciencia.
+              Terminé ahorrando y mejorando la cobertura.”
+            </p>
+            <div class="nb-card__person">
+              <div class="nb-avatar">ML</div>
+              <div>
+                <strong>María López</strong>
+                <span>Seguro de Auto • CABA</span>
+              </div>
+            </div>
+          </article>
+          <article class="nb-card nb-card--testimonial">
+            <p class="nb-card__quote">
+              “Contraté el seguro de hogar después de una tormenta fuerte. Valoro que siempre responden rápido por WhatsApp y con honestidad siempre"
+            </p>
+            <div class="nb-card__person">
+              <div class="nb-avatar">JG</div>
+              <div>
+                <strong>Juan García</strong>
+                <span>Seguro de Hogar • Zona Norte</span>
+              </div>
+            </div>
+          </article>
+          <article class="nb-card nb-card--testimonial">
+            <p class="nb-card__quote">
+              “Me ayudaron a elegir un plan de vida que se ajusta a mi familia y a mi presupuesto. Todo el proceso fue muy claro y siempre rebuscando los mejores precios"
+            </p>
+            <div class="nb-card__person">
+              <div class="nb-avatar">AS</div>
+              <div>
+                <strong>Ana Suárez</strong>
+                <span>Seguro de Vida • La Plata</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ALIADOS -->
+    <section class="nb-section nb-section--muted nb-section--compact">
+      <div class="nb-container">
+        <div class="nb-allies">
+          <p>Trabajamos con compañías aseguradoras líderes del mercado argentino.</p>
+          <div class="nb-allies__row">
+            <span class="nb-tag nb-tag--ally">Aseguradora A</span>
+            <span class="nb-tag nb-tag--ally">Aseguradora B</span>
+            <span class="nb-tag nb-tag--ally">Aseguradora C</span>
+            <span class="nb-tag nb-tag--ally">Aseguradora D</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA FINAL -->
+    <section class="nb-section nb-section--cta">
+      <div class="nb-container nb-section__cta-inner">
+        <div>
+          <h2>¿Listo para revisar tu seguro?</h2>
+          <p>En menos de 15 minutos podemos ayudarte a entender si estás bien cubierto o si hay mejores opciones para vos.</p>
+        </div>
+        <a href="contacto.html" class="nb-btn nb-btn--secondary">Hablar con un asesor</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="nb-footer">
+    <div class="nb-container nb-footer__grid">
+      <div>
+        <div class="nb-logo nb-logo--footer">
+          <span class="nb-logo__mark">N</span>
+          <span class="nb-logo__text">Nova<span>Brokers</span></span>
+        </div>
+        <p class="nb-footer__text">
+          Bróker de seguros digital pensado para acompañarte en cada etapa de tu vida.
+        </p>
+      </div>
+      <div>
+        <h4 class="nb-footer__title">Secciones</h4>
+        <ul class="nb-footer__list">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="cotizaciones.html">Seguros</a></li>
+          <li><a href="sobrenosotros.html">Nosotros</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="nb-footer__title">Contacto</h4>
+        <ul class="nb-footer__list">
+          <li>Tel: +54 11 5555-1234</li>
+          <li>Email: hola@novabrokers.com</li>
+          <li>Lun a vie de 9 a 18 hs</li>
+        </ul>
+      </div>
+    </div>
+    <div class="nb-footer__bottom">
+      <div class="nb-container nb-footer__bottom-inner">
+        <p>© 2025 NovaBrokers. Todos los derechos reservados.</p>
+        <p class="nb-footer__legal">NovaBrokers actúa como productor asesor de seguros. Las pólizas son emitidas por compañías aseguradoras debidamente registradas.</p>
+      </div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/5491155551234" class="nb-whatsapp" target="_blank" rel="noopener">
+    <span>💬</span>
+  </a>
+
+  <script src="script.js"></script>
+
+</body>
+</html>

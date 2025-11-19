@@ -1,0 +1,17 @@
+{
+  "name": "novabrokers",
+  "version": "1.0.0",
+  "description": "NovaBrokers - Seguros digitales",
+  "scripts": {
+    "sass": "sass scss/styles.scss main.css",
+    "sass:watch": "sass --watch scss/styles.scss main.css",
+    "sass:compressed": "sass scss/styles.scss main.css --style compressed"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.69.0"
+  }
+}
+
