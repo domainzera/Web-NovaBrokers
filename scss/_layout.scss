@@ -95,6 +95,7 @@ img {
   gap: 4px;
   cursor: pointer;
   padding: 0;
+  z-index: 50;
 
   span {
     width: 20px;
@@ -115,6 +116,10 @@ img {
       transform: translateY(-6px) rotate(-45deg);
     }
   }
+
+  @include respond-to(md) {
+    display: none;
+  }
 }
 
 .nb-nav {
@@ -124,9 +129,11 @@ img {
   background-color: rgba(255, 255, 255, 0.98);
   padding: $spacing-md $spacing-lg $spacing-lg;
   display: none;
-  @include flex-column;
+  flex-direction: column;
   gap: 0.6rem;
   border-bottom: 1px solid rgba(225, 225, 230, 0.8);
+  z-index: 45;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 
   &.is-open {
     display: flex;
@@ -140,6 +147,7 @@ img {
     padding: 0;
     border: none;
     background: transparent;
+    box-shadow: none;
   }
 }
 
